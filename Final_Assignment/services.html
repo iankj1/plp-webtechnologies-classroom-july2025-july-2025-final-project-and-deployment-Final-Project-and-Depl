@@ -8,44 +8,48 @@
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html" class="active">Services</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar">
+      <div class="logo">GameCentre</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">☰</div>
     </nav>
   </header>
 
-  <main>
-    <section class="services">
-      <h1>Our Services</h1>
-      <div class="service-list">
-        <div>
-          <img src="https://images.unsplash.com/photo-1596464716121-9f8b5c1744d2" alt="Arcade Games">
-          <h2>🎮 Indoor Arcade Games</h2>
-          <p>Fun digital and classic arcade challenges for all ages.</p>
-        </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf" alt="Sports">
-          <h2>⚽ Outdoor Sports Activities</h2>
-          <p>Football, basketball, and more in our safe outdoor space.</p>
-        </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1560185127-6ed189bf82d6" alt="Workshops">
-          <h2>🎨 Creative Workshops</h2>
-          <p>Art, crafts, and hands-on learning experiences for kids.</p>
-        </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1600959907703-1e0a91e587ed" alt="Birthday Party">
-          <h2>🎂 Birthday Party Hosting</h2>
-          <p>Celebrate special days with fun themes and games.</p>
-        </div>
+  <section class="services fade-in">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card hover-zoom">
+        <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd" alt="Arcade Games">
+        <h3>Arcade Games</h3>
+        <p>Exciting and interactive arcade games for endless fun.</p>
       </div>
-    </section>
-  </main>
+      <div class="card hover-zoom">
+        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc" alt="Sports Activities">
+        <h3>Sports Activities</h3>
+        <p>Safe and fun physical activities to keep kids active.</p>
+      </div>
+      <div class="card hover-zoom">
+        <img src="https://images.unsplash.com/photo-1508881506480-42bb6e7b8b8c" alt="Birthday Parties">
+        <h3>Birthday Parties</h3>
+        <p>Memorable celebrations with games, food, and fun!</p>
+      </div>
+      <div class="card hover-zoom">
+        <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="Learning Activities">
+        <h3>Learning Activities</h3>
+        <p>Fun educational programs designed to inspire curiosity.</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Children's Game Centre. All rights reserved.</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
