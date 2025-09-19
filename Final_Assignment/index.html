@@ -8,25 +8,31 @@
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar">
+      <div class="logo">GameCentre</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">☰</div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Kids Playing">
+  <section class="hero fade-in">
+    <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c" alt="Kids playing" class="hero-img">
+    <div class="hero-text">
       <h1>Welcome to the Children's Game Centre</h1>
-      <p>A magical place where children explore, learn, and play!</p>
-      <a href="services.html" class="btn">Explore Our Games →</a>
-    </section>
-  </main>
+      <p>Fun, safe, and interactive experiences for all kids!</p>
+      <a href="services.html" class="btn">Explore Services</a>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Children's Game Centre. All rights reserved.</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
