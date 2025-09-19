@@ -3,47 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Children's Game Centre</title>
+  <title>About - Children's Game Centre</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar">
+      <div class="logo">GameCentre</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">☰</div>
     </nav>
   </header>
 
-  <main>
-    <section class="about">
-      <img src="https://images.unsplash.com/photo-1596464716121-9f8b5c1744d2" alt="Happy Kids">
-      <h1>About Us</h1>
-      <p>We believe play is the foundation of growth. Our mission is to create a joyful, safe, and engaging space where children can discover new skills and make friends.</p>
-
-      <div class="features">
-        <div>
-          <img src="https://images.unsplash.com/photo-1622551244950-b482a6f0a407" alt="Fun">
-          <h2>🎉 Fun-Filled</h2>
-          <p>Exciting activities designed to spark joy and laughter for every child.</p>
-        </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Safe">
-          <h2>🛡️ Safe & Secure</h2>
-          <p>A supervised environment where parents can feel confident.</p>
-        </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1581091215367-59ab6a3d4f26" alt="Educational">
-          <h2>🌱 Educational</h2>
-          <p>Workshops and interactive games that inspire creativity and teamwork.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section class="about fade-in">
+    <h2>About Us</h2>
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="About our centre" class="about-img">
+    <p>At the Children's Game Centre, we believe in creating a joyful, safe, and creative environment where kids can explore, learn, and grow. From exciting arcade games to educational activities, we have it all!</p>
+    <p>Our mission is to inspire curiosity and build lifelong memories for kids and their families. Come and see why we’re the top choice for fun and adventure.</p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Children's Game Centre. All rights reserved.</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
