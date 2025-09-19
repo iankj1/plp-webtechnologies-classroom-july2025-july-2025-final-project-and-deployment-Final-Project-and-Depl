@@ -5,39 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Children's Game Centre</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html" class="active">Contact</a>
+    <nav class="navbar">
+      <div class="logo">GameCentre</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">☰</div>
     </nav>
   </header>
 
-  <main>
-    <section class="contact">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Contact Us">
-      <h1>Contact Us</h1>
-      <p>Have questions or want to make a booking? We'd love to hear from you!</p>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <div class="info">
-        <p>📍 Location: Nairobi, Kenya</p>
-        <p>📞 Phone: +254 700 123 456</p>
-        <p>📧 Email: info@childrengamecentre.com</p>
-      </div>
-    </section>
-  </main>
+  <section class="contact fade-in">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="formMsg"></p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Children's Game Centre. All rights reserved.</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
