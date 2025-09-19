@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- copy header here (same as index) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">MySite</a>
+      <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav" class="nav-toggle">Menu</button>
+      <nav id="main-nav" class="nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Me</h1>
+    <form id="contactForm" novalidate>
+      <label>
+        Name
+        <input type="text" name="name" id="name" required minlength="2" />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" id="email" required />
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" id="message" required minlength="10"></textarea>
+      </label>
+
+      <button type="submit" class="btn">Send Message</button>
+      <p id="formFeedback" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <!-- copy footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> MySite</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
