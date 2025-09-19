@@ -1,58 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Children's Game Centre</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-  <!-- copy header here (same as index) -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">MySite</a>
-      <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav" class="nav-toggle">Menu</button>
-      <nav id="main-nav" class="nav" aria-label="Main Navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <h1>Contact Me</h1>
-    <form id="contactForm" novalidate>
-      <label>
-        Name
-        <input type="text" name="name" id="name" required minlength="2" />
-      </label>
-
-      <label>
-        Email
-        <input type="email" name="email" id="email" required />
-      </label>
-
-      <label>
-        Message
-        <textarea name="message" id="message" required minlength="10"></textarea>
-      </label>
-
-      <button type="submit" class="btn">Send Message</button>
-      <p id="formFeedback" role="status" aria-live="polite"></p>
-    </form>
+  <main>
+    <section class="contact">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Contact Us">
+      <h1>Contact Us</h1>
+      <p>Have questions or want to make a booking? We'd love to hear from you!</p>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="info">
+        <p>📍 Location: Nairobi, Kenya</p>
+        <p>📞 Phone: +254 700 123 456</p>
+        <p>📧 Email: info@childrengamecentre.com</p>
+      </div>
+    </section>
   </main>
 
-  <!-- copy footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> MySite</p>
-    </div>
+  <footer>
+    <p>&copy; 2025 Children's Game Centre. All rights reserved.</p>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
