@@ -1,54 +1,43 @@
-// small utilities
-document.getElementById('year')?.textContent = new Date().getFullYear();
+// Menu Toggle
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-// toggle mobile nav
-const navToggle = document.getElementById('nav-toggle');
-const mainNav = document.getElementById('main-nav');
-if(navToggle && mainNav){
-  navToggle.addEventListener('click', () => {
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!expanded));
-    mainNav.style.display = expanded ? 'none' : 'block';
-  });
-}
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
 
-// basic contact form validation + UX
-const form = document.getElementById('contactForm');
-if(form){
-  const feedback = document.getElementById('formFeedback');
-  form.addEventListener('submit', (e) => {
+// Contact Form Validation
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const message = document.getElementById('message');
-    let errors = [];
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const formMsg = document.getElementById("formMsg");
 
-    if(!name.value || name.value.trim().length < 2) errors.push('Name too short');
-    if(!email.value || !/^\S+@\S+\.\S+$/.test(email.value)) errors.push('Enter a valid email');
-    if(!message.value || message.value.trim().length < 10) errors.push('Message too short');
-
-    if(errors.length){
-      feedback.textContent = errors.join('. ');
-      feedback.style.color = 'crimson';
-      return;
+    if (!name || !email || !message) {
+      formMsg.textContent = "⚠️ Please fill in all fields.";
+      formMsg.style.color = "red";
+    } else {
+      formMsg.textContent = "✅ Message sent successfully!";
+      formMsg.style.color = "green";
+      contactForm.reset();
     }
-
-    // Simulate async send and show success (no backend in this assignment)
-    feedback.textContent = 'Message sent — thanks! (demo only)';
-    feedback.style.color = 'green';
-    form.reset();
   });
 }
 
-// on-scroll reveal (very small, no lib)
-const revealOnScroll = () => {
-  const els = document.querySelectorAll('.card, .features h2');
-  const winH = window.innerHeight;
-  els.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if(rect.top < winH - 80) el.style.opacity = 1, el.style.transform = 'none';
-    else { el.style.opacity = 0; el.style.transform = 'translateY(20px)'; }
+// Fade-in on Scroll
+const faders = document.querySelectorAll(".fade-in");
+const appearOptions = { threshold: 0.2 };
+const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("show");
+    observer.unobserve(entry.target);
   });
-};
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
