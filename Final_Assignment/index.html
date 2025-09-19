@@ -1,59 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Portfolio — Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Children's Game Centre | Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">MySite</a>
-      <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav" class="nav-toggle">Menu</button>
-      <nav id="main-nav" class="nav" aria-label="Main Navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <h1>Children's Game Centre</h1>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero container">
-      <h1>Design. Build. Ship.</h1>
-      <p>I make clean, responsive websites that solve real problems.</p>
-      <p><a class="btn" href="services.html">See Services</a> <a class="btn ghost" href="contact.html">Contact me</a></p>
-    </section>
-
-    <section class="features container" id="features">
-      <h2>Featured Projects</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Project A</h3>
-          <p>Short description of what it does and the tech used.</p>
-        </article>
-        <article class="card">
-          <h3>Project B</h3>
-          <p>Short description + link to repo or demo.</p>
-        </article>
-        <article class="card">
-          <h3>Project C</h3>
-          <p>Short description + impact/metrics if any.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> MySite — Built with HTML, CSS & JS</p>
+  <section class="hero">
+    <img src="images/kids-playing.jpg" alt="Kids playing games">
+    <div class="hero-text">
+      <h2>Welcome to the Fun Zone!</h2>
+      <p>Where kids learn, play, and grow in a safe and exciting environment.</p>
+      <a href="services.html" class="btn">Explore Our Games</a>
     </div>
-  </footer>
+  </section>
 
-  <script src="js/main.js"></script>
+  <footer>
+    <p>&copy; 2025 Children's Game Centre | All Rights Reserved</p>
+  </footer>
 </body>
 </html>
